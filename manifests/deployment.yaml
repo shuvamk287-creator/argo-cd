@@ -20,7 +20,7 @@ spec:
       containers:
       - name: ai-cost-detective
 
-        image: ai-cost-detective:v1
+        image: shuvamk287/ai-cost-detective:v1
 
         imagePullPolicy: Never
 
