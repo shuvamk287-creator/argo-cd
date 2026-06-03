@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: ai-cost-detective
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: ai-cost-detective
+
+  template:
+    metadata:
+      labels:
+        app: ai-cost-detective
+
+    spec:
+      containers:
+      - name: ai-cost-detective
+
+        image: ai-cost-detective:v1
+
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 8000
