@@ -22,7 +22,7 @@ spec:
 
       containers:
       - name: ai-cost-detective
-        image: shuv922/ai-cost-detective:cc9af4078865ab4917bf9a878c443cc4a0681cf
+        image: shuv922/ai-cost-detective:fd8acb808ab2e5cea9f082a09cf683443c51e65a
         imagePullPolicy: Always
 
         ports:
