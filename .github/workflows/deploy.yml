@@ -33,4 +33,12 @@ jobs:
 
       - name: Update Deployment YAML
         run: |
-          sed -i "s|image: .*|image: shuv922/ai-cost-detective:${{ github.sha }}|g" manifests/dep
+          sed -i "s|image: .*|image: shuv922/ai-cost-detective:${{ github.sha }}|g" manifests/deployment.yaml
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add manifests/deployment.yaml
+          git diff --staged --quiet || git commit -m "[skip ci] Update image to ${{ github.sha }}"
+          git push origin HEAD:main
