@@ -52,4 +52,3 @@ steps:
       git diff --staged --quiet || git commit -m "[skip ci] Update image to ${{ github.sha }}"
 
       git push origin HEAD:main
-```
