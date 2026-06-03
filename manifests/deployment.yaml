@@ -20,7 +20,7 @@ spec:
       containers:
       - name: ai-cost-detective
 
-       image: shuv922/ai-cost-detective:v1
+       image: shuv922/ai-cost-detective:9f6865ea548921df384e56b87b17fd424cd9b8f5
        imagePullPolicy: Always
 
         ports:
